@@ -11,11 +11,11 @@ export default function SvgLoader() {
 
   const initialPath =
     "M24 0h352s24 0 24 24v152s0 24 -24 24h-352s-24 0 -24 -24v-152s0 -24 24 -24";
-  const targetPath = `M-0 -${dimension.height / 2 - 160}h${
+  const targetPath = `M-0 -${dimension.height / 2 - 150}h${
     dimension.width / 2 + 140
-  }s24 0 24 24v${dimension.height - 120}s0 24 -24 24h-${
+  }s24 0 24 24v${dimension.height - 110}s0 24 -24 24h-${
     dimension.width - 120
-  }s-24 0 -24 -24v-${dimension.height - 120}s0 -24 24 -24`;
+  }s-24 0 -24 -24v-${dimension.height - 110}s0 -24 24 -24`;
 
   const box = {
     initial: {
@@ -81,7 +81,7 @@ export default function SvgLoader() {
                   surfaceScale="11"
                   specularConstant=".3"
                   specularExponent="20"
-                  lighting-color="#c6c4c8"
+                  lightingColor="#c6c4c8"
                   x="0%"
                   y="0%"
                   width="100%"
