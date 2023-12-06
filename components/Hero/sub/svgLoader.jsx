@@ -51,7 +51,7 @@ export default function SvgLoader() {
       {dimension.width > 0 && (
         <>
           <svg
-            className="absolute origin-top-left"
+            className=""
             viewBox={`0 0 ${dimension.width} ${dimension.height}`}
           >
             <defs>

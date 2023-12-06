@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  overflow: hidden;
+    
+}
+
+body::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
 .clamp-text{
   font-size: clamp(2rem, -9.071rem + 29.424vw, 17.5rem);
 }
@@ -9,6 +19,12 @@
 .text-smooth{
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.sticky-element {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .svg-hover:hover path{

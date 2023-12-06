@@ -1,7 +1,7 @@
 "use client";
-import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import { menuSlide } from "@/components/anim/anim";
+import localFont from "next/font/local";
 
 const cabinet = localFont({
   src: "../../../public/CabinetGrotesk-Variable.ttf",
@@ -23,7 +23,7 @@ export default function Menu() {
         whileHover="hovering"
         custom={index}
         variants={menuSlide}
-        className={`svg-hover flex cursor-pointer items-center gap-2 text-[14px] text-[#e9e7e1] ${cabinet.className}`}
+        className={`svg-hover flex cursor-pointer items-center gap-2 text-[15.605px] text-[#e9e7e1] ${cabinet.className}`}
         key={index}
       >
         <span>

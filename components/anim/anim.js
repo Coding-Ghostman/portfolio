@@ -1,3 +1,23 @@
+export const mainAnim = {
+  initial: {
+    backgroundColor: "#ccc5b9",
+  },
+  open: {
+    backgroundColor: "#121212",
+    transition: {
+      duration: 0.4,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+  closed: {
+    backgroundColor: "#ccc5b9",
+    transition: {
+      duration: 0.4,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
+
 export const slideUp = {
   initial: (i) => ({
     y: i % 2 == 0 ? 220 : -220,
@@ -26,7 +46,7 @@ export const descSlideUp = {
   }),
   enter: (i) => ({
     y: 0,
-    fontWeight: 400,
+    fontWeight: 500,
     transition: {
       duration: 0.6,
       ease: [0.76, 0, 0.24, 1],
@@ -67,7 +87,6 @@ export const opacity = {
   },
 };
 
-
 const curve = {
   duration: 0.8,
   ease: [0.76, 0, 0.24, 1],
@@ -80,7 +99,7 @@ export const menuSlide = {
     transition: { ...curve, delay: 0.4 },
   },
   hovering: {
-    fontWeight: 200,
+    fontWeight: 100,
     transition: {
       ...curve,
       duration: 0.13,
@@ -89,7 +108,7 @@ export const menuSlide = {
   },
   enter: (i) => ({
     x: 0,
-    fontWeight: 700,
+    fontWeight: 500,
     transition: {
       ...curve,
       fontWeight: {

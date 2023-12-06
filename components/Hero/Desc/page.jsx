@@ -1,6 +1,12 @@
 "use client";
 import { descSlideUp } from "@/components/anim/anim";
 import { motion } from "framer-motion";
+import localFont from "next/font/local";
+
+const cabinet = localFont({
+  src: "../../../public/CabinetGrotesk-Variable.ttf",
+  weight: "variable",
+});
 
 export default function Desc() {
   const desc =
@@ -14,7 +20,7 @@ export default function Desc() {
           initial="initial"
           animate="enter"
           custom={index}
-          className="px-1 text-[#e9e7e1]"
+          className={`text-[15.605px] text-[#e9e7e1] ${cabinet.className}`}
         >
           {word}
         </motion.p>
@@ -23,7 +29,7 @@ export default function Desc() {
   });
 
   return (
-    <div className="flex max-w-[600px] flex-wrap items-center">
+    <div className="flex max-w-[500px] flex-wrap items-center gap-1">
       {renderedDesc}
     </div>
   );
