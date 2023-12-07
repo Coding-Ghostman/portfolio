@@ -31,21 +31,6 @@ export default function SvgLoader() {
       transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 4 },
     },
   };
-
-  const box_filter = {
-    initial: {
-      x: 20,
-      y: 20,
-      d: initialPath,
-    },
-    enter: {
-      x: 20,
-      y: 20,
-      d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 1 },
-    },
-  };
-
   return (
     <div className="">
       {dimension.width > 0 && (
@@ -55,59 +40,16 @@ export default function SvgLoader() {
             viewBox={`0 0 ${dimension.width} ${dimension.height}`}
           >
             <defs>
-              <filter
-                id="a"
-                x="0%"
-                y="0%"
-                width="300%"
-                height="280%"
-                filterUnits="objectBoundingBox"
-                primitiveUnits="userSpaceOnUse"
-                color-interpolation-filters="linearRGB"
-              >
-                <feTurbulence
-                  type="fractalNoise"
-                  baseFrequency=".154"
-                  numOctaves="6"
-                  seed="17"
-                  stitchTiles="stitch"
-                  x="0%"
-                  y="0%"
-                  width="200%"
-                  height="200%"
-                  result="turbulence"
+              <clipPath id="maskBox">
+                <motion.path
+                  variants={box}
+                  initial="initial"
+                  animate="enter"
+                  fill="#121212"
+                  d={initialPath}
                 />
-                <feSpecularLighting
-                  surfaceScale="11"
-                  specularConstant=".3"
-                  specularExponent="20"
-                  lightingColor="#c6c4c8"
-                  x="0%"
-                  y="0%"
-                  width="100%"
-                  height="100%"
-                  in="turbulence"
-                  result="specularLighting"
-                >
-                  <feDistantLight azimuth="3" elevation="80" />
-                </feSpecularLighting>
-              </filter>
+              </clipPath>
             </defs>
-            <motion.path
-              variants={box}
-              initial="initial"
-              animate="enter"
-              fill="#121212"
-              d={initialPath}
-            />
-            <motion.path
-              variants={box_filter}
-              initial="initial"
-              animate="enter"
-              filter="url(#a)"
-              fill="#121212"
-              d={initialPath}
-            />
           </svg>
         </>
       )}

@@ -5,7 +5,7 @@ import SvgLoader from "./sub/svgLoader";
 
 export default function Hero() {
   return (
-    <div className="mb-1 h-screen w-screen selection:bg-[#ccc5b9] selection:text-[#121212]">
+    <div className="maskDiv mb-1 h-screen w-screen bg-[#121212] selection:bg-[#ccc5b9] selection:text-[#121212]">
       <div className="absolute left-[10%] top-[40%] z-[10] flex">
         <Menu />
       </div>

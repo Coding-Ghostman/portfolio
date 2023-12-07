@@ -32,3 +32,8 @@ body::-webkit-scrollbar {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
 }
+
+.maskDiv {
+  -webkit-clip-path: url(#maskBox);
+  clip-path:url(#maskBox);
+}

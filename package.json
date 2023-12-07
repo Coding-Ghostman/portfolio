@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^10.16.10",
+    "@react-three/fiber": "^8.15.12",
+    "@types/three": "^0.159.0",
+    "framer-motion": "^10.16.14",
     "geist": "^1.2.0",
     "gsap": "^3.12.3",
     "locomotive-scroll": "^5.0.0-beta.11",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "shadergradient": "^1.2.4",
+    "three": "^0.159.0"
   },
   "devDependencies": {
     "autoprefixer": "^10",
